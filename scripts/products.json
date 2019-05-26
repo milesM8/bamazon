@@ -1,0 +1,62 @@
+[
+	{
+		"product_name": "Bananas",
+		"department_name": "Produce",
+		"price": 0.99,
+		"stock_quantity": 30
+	},
+	{
+		"product_name": "Apples",
+		"department_name": "Produce",
+		"price": 0.59,
+		"stock_quantity": 50
+	},
+	{
+		"product_name": "Oranges",
+		"department_name": "Produce",
+		"price": 0.89,
+		"stock_quantity": 40
+	},
+	{
+		"product_name": "A boat",
+		"department_name": "Vehicles",
+		"price": 15999.99,
+		"stock_quantity": 1
+	},
+	{
+		"product_name": "Hoverboard",
+		"department_name": "Vehicles",
+		"price": 199.99,
+		"stock_quantity": 2
+	},
+	{
+		"product_name": "Milk",
+		"department_name": "Beverages",
+		"price": 5.99,
+		"stock_quantity": 10
+	},
+	{
+		"product_name": "Tea",
+		"department_name": "Beverages",
+		"price": 2.99,
+		"stock_quantity": 15
+	},
+	{
+		"product_name": "Water",
+		"department_name": "Beverages",
+		"price": 1.99,
+		"stock_quantity": 100
+	},
+	{
+		"product_name": "Shampoo",
+		"department_name": "Toiletries",
+		"price": 0.99,
+		"stock_quantity": 20
+	},
+	{
+		"product_name": "Conditioner",
+		"department_name": "Toiletries",
+		"price": 0.99,
+		"stock_quantity": 20
+	}
+]
