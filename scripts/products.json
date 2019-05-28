@@ -50,13 +50,13 @@
 	{
 		"product_name": "Shampoo",
 		"department_name": "Toiletries",
-		"price": 0.99,
+		"price": 6.99,
 		"stock_quantity": 20
 	},
 	{
 		"product_name": "Conditioner",
 		"department_name": "Toiletries",
-		"price": 0.99,
+		"price": 6.99,
 		"stock_quantity": 20
 	}
 ]
