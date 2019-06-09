@@ -32,7 +32,6 @@ module.exports = function(app) {
 		});
 	});
 
-	// DELETE route for deleting posts
 	app.delete("/api/products/:id", function(req, res) {
 		db.Product.destroy({
 			where: {
