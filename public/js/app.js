@@ -1,12 +1,14 @@
 $(document).ready(function () {
 
-	$("#btn").click(function (e) {
-		e.preventDefault();
-		// var stock = $("#stock").val();
-		var check = $(this).closest("#stock").text().val();
-		console.log(check);
-		console.log("succ");
-	});
+	$(document).on("click", "button", addtoCart);
+
+	function addtoCart(j) {
+		j.preventDefault();
+		var name = $(this).closest("tr").children("#name").text();
+		var stock = $(this).closest("tr").children("#stockNum").text();
+		var price = $(this).closest("tr").children("#name").text();
+
+	}
 
 	function getProducts() {
 		$.get("/api/products", populateItems);
@@ -18,10 +20,10 @@ $(document).ready(function () {
 			var tableBody = $("#products");
 			var tableContainer = $(["<tr>",
 				"<th scope='row'></th>",
-				"<td>", data[i].product_name, "</td>",
-				"<td>", data[i].department_name, "</td>",
-				"<td>", data[i].stock_quantity, "</td>",
-				"<td>", data[i].price + "$", "</td>",
+				"<td id='name'>", data[i].product_name, "</td>",
+				"<td id='department'>", data[i].department_name, "</td>",
+				"<td id='stockNum'>", data[i].stock_quantity, "</td>",
+				"<td id='price'>", data[i].price + "$", "</td>",
 				"<td>", "<div class='form-group'>", "<input type='number' class='form-control' id='stock'/>",
 				"</div>", "</td>", "<td>", "<button type='button' id='btn' class='btn btn-success'>", "<i class='fa fa-cart-plus'>", "</i>", "</button>", "</td>", "</tr>"
 			].join(""))
