@@ -4,12 +4,18 @@ $(document).ready(function () {
 	$(document).on("click", "button", add$);
 
 	function addtoCart() {
+
 		var name = $(this).closest("tr").children("#name").text();
-		// var stock = $(this).closest("tr").children("#stockNum").text();
+		var stock = $(this).closest("tr").children("#stockNum").text();
 		var price = $(this).closest("tr").children("#price").text();
 		var chosenStock = $(this).closest("tr").find("#stock").val();
 		var priceTimesStock = (parseFloat(price) * chosenStock).toFixed(2);
-		// var numberPurchasing = $("#stock").val();
+
+		if (chosenStock > stock) {
+			alert("Insufficient Quantity");
+			return;
+		}
+
 		var tableBody = $("#cart");
 		var tableContainer = $(["<tr>",
 			"<th scope='row'></th>",
@@ -27,6 +33,7 @@ $(document).ready(function () {
 			$("#totalPrice").append("$");
 		}
 	}
+
 	var runTotal = [];
 
 	function runningTotal(incomingPrice) {
