@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
 	$(document).on("click", "button", addtoCart);
-	$(document).on("click", "button", add$);
+	// $(document).on("click", "button", add$);
 
 	function addtoCart() {
 
@@ -11,7 +11,7 @@ $(document).ready(function () {
 		var chosenStock = $(this).closest("tr").find("#stock").val();
 		var priceTimesStock = (parseFloat(price) * chosenStock).toFixed(2);
 
-		if (chosenStock > stock) {
+		if (chosenStock > parseInt(stock)) {
 			alert("Insufficient Quantity");
 			return;
 		}
@@ -27,12 +27,12 @@ $(document).ready(function () {
 		
 	}
 
-	function add$() {
-		var totalPrice = $("#totalPrice").text();
-		if (totalPrice != "") {
-			$("#totalPrice").append("$");
-		}
-	}
+	// function add$() {
+	// 	var totalPrice = $("#totalPrice").text();
+	// 	if (totalPrice != "") {
+	// 		$("#totalPrice").append("$");
+	// 	}
+	// }
 
 	var runTotal = [];
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
 		for (let i = 0; i < runTotal.length; i++) {
 			sum += parseFloat(runTotal[i]);
 		}
-		return sum;
+		return sum + "$";
 	}
 
 	function getProducts() {
