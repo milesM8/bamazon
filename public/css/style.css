@@ -3,3 +3,7 @@
 	text-align: center;
 	margin-left: 10px;
 }
+
+td {
+	width: 50px; 
+}

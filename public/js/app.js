@@ -22,7 +22,7 @@ $(document).ready(function () {
 			"<td id='name2'>", name, "</td>",
 			"<td id='stockNum2'>", chosenStock, "</td>",
 			"<td id='price2'>", priceTimesStock + "$", "</td>"].join(""));
-		tableBody.append(tableContainer);
+		tableBody.prepend(tableContainer);
 		$("#totalPrice").text(runningTotal(priceTimesStock));	
 		
 	}
