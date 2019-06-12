@@ -18,7 +18,7 @@ $(document).ready(function () {
 
 		var tableBody = $("#cart");
 		var tableContainer = $(["<tr>",
-			"<th scope='row'></th>",
+			"<th style='display: none' scope='row'></th>",
 			"<td id='name2'>", name, "</td>",
 			"<td id='stockNum2'>", chosenStock, "</td>",
 			"<td id='price2'>", priceTimesStock + "$", "</td>"].join(""));
@@ -26,13 +26,6 @@ $(document).ready(function () {
 		$("#totalPrice").text(runningTotal(priceTimesStock));	
 		
 	}
-
-	// function add$() {
-	// 	var totalPrice = $("#totalPrice").text();
-	// 	if (totalPrice != "") {
-	// 		$("#totalPrice").append("$");
-	// 	}
-	// }
 
 	var runTotal = [];
 
@@ -54,7 +47,7 @@ $(document).ready(function () {
 		for (let i = 0; i < data.length; i++) {
 			var tableBody = $("#products");
 			var tableContainer = $(["<tr>",
-				"<th scope='row'></th>",
+				"<th style='display: none' scope='row'></th>",
 				"<td id='name'>", data[i].product_name, "</td>",
 				"<td id='department'>", data[i].department_name, "</td>",
 				"<td id='stockNum'>", data[i].stock_quantity, "</td>",
