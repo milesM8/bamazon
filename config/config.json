@@ -15,10 +15,10 @@
 	},
 	"production": {
 		"username": "root",
-		"password": null,
+		"password": "supyall123",
 		"database": "database_production",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
-		"use_env_variable":"jawsdb-acute-32358"
+		"use_env_variable": "jawsdb-acute-32358"
 	}
 }
