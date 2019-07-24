@@ -7,3 +7,11 @@
 td {
 	width: 50px; 
 }
+
+body {
+	background: url("../../Frost.jpg")  center;
+	background-size: cover;
+	min-height: 100%;
+	position: relative;
+	padding-bottom: [footer-height];
+}
