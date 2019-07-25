@@ -1,17 +1,26 @@
 $(document).ready(function () {
 
 	$(document).on("click", "#btn", addtoCart);
+	// $(document).on("click", "#checkoutButton", modalTotal);
 
 	function addtoCart() {
 
+		var stockbox = $(this).closest("tr").find("#stockChoice")
 		var name = $(this).closest("tr").children("#name").text();
 		var stock = $(this).closest("tr").children("#stockNum").text();
 		var price = $(this).closest("tr").children("#price").text();
 		var chosenStock = $(this).closest("tr").find("#stock").val();
 		var priceTimesStock = (parseFloat(price) * chosenStock).toFixed(2);
 
+		// console.log(chosenStock, "chosenSTock")
+		// console.log(priceTimesStock, "pricexStock")
+
 		if (chosenStock > parseInt(stock)) {
 			alert("Insufficient Quantity");
+			return;
+		}
+		
+		if (stockbox.is(':empty')) {
 			return;
 		}
 
@@ -23,7 +32,8 @@ $(document).ready(function () {
 			"<td id='price2'>", priceTimesStock + "$", "</td>"].join(""));
 		tableBody.prepend(tableContainer);
 		$("#totalPrice").text(runningTotal(priceTimesStock));	
-		
+		$("#modalTotal").text(runningTotal(priceTimesStock));	
+		stockbox.empty();
 	}
 
 	var runTotal = [];
@@ -40,7 +50,6 @@ $(document).ready(function () {
 	function getProducts() {
 		$.get("/api/products", populateItems);
 	}
-
 
 	function populateItems(data) {
 		for (let i = 0; i < data.length; i++) {
