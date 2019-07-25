@@ -19,7 +19,8 @@
 	<link rel="stylesheet"
 		type="text/css"
 		href="./css/style.css" />
-
+	<link rel="stylesheet"
+		href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
@@ -93,13 +94,24 @@
 					<div class="modal-body">
 						<h2 style="color:azure"
 							id=totalPrice></h2>
+						<span style="font-size: 48px; color: Dodgerblue;">
+
+							<i class="fab fa-cc-paypal"></i>
+							<i class="fab fa-cc-visa"></i>
+							<i class="fab fa-cc-mastercard"></i>
+							<i class="fab fa-cc-amazon-pay"></i>
+							<i class="fab fa-cc-apple-pay"></i>
+							<i class="fab fa-cc-discover"></i>
+
+						</span>
 					</div>
 					<div class="modal-footer">
 						<button type="button"
 							class="btn btn-secondary"
 							data-dismiss="modal">Close</button>
 						<button type="button"
-							class="btn btn-primary">Save changes</button>
+							id="reload"
+							class="btn btn-primary">Back to store</button>
 					</div>
 				</div>
 			</div>

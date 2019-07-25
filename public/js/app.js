@@ -19,7 +19,7 @@ $(document).ready(function () {
 			alert("Insufficient Quantity");
 			return;
 		}
-		
+
 		if (stockbox.is(':empty')) {
 			return;
 		}
@@ -31,9 +31,9 @@ $(document).ready(function () {
 			"<td id='stockNum2'>", chosenStock, "</td>",
 			"<td id='price2'>", priceTimesStock + "$", "</td>"].join(""));
 		tableBody.prepend(tableContainer);
-		$("#totalPrice").text(runningTotal(priceTimesStock));	
-		$("#modalTotal").text(runningTotal(priceTimesStock));	
+		$("#totalPrice, #modalTotal").text(runningTotal(priceTimesStock));	
 		stockbox.empty();
+		console.log(runTotal)
 	}
 
 	var runTotal = [];
@@ -66,5 +66,9 @@ $(document).ready(function () {
 			tableBody.append(tableContainer);
 		};
 	}
+	$('#reload').click(function () {
+		location.reload();
+	});
+
 	getProducts();
 });
